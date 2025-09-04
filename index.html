@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--
+    Modern Portfolio Website
+    Copyright (c) 2024 Sathiyaseelan Soundar
+    All rights reserved.
+    
+    This code is protected by copyright law. Unauthorized reproduction,
+    distribution, or modification is strictly prohibited.
+    
+    For permissions, contact: sathiyaseelansoundar@gmail.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathiyaseelan Soundar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+
+<body>
+    <!-- Video Background Container -->
+    <div id="video-background">
+        <!-- Video background (non-interactive background) -->
+        <video class="video-embed" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+            <source src="assets/videos/3141211-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Sathiyaseelansoundar</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title hero-name">
+                <span class="gradient-text">Sathiyaseelan Soundar </span>
+            </h1>
+            <p class="hero-subtitle">Fresher</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Replace with your actual image -->
+                    <img src="C:\Users\sathi\Downloads\generation-196f235b-ad20-48c1-a191-6cff6344e994-removebg-preview.png"
+                        alt="Your Name" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <div class="glass-card">
+                        <h3>Hello, I'm Sathiyaseelansoundar</h3>
+                        <p>
+                            <!-- Replace with your actual about text -->
+                            I'm a passionate fresher with a solid foundation in software development, particularly in
+                            Core Java and MySQL for database management. Recently, I’ve been exploring the exciting
+                            space of Agentic AI by building AI agents with n8n and integrating modern AI tools.
+                            Alongside my technical skills, I also enjoy working on UI design in Figma, where I focus on
+                            creating clean and user-friendly designs
+                        </p>
+                        <p>
+                            What started as simple curiosity about technology has grown into a genuine commitment to
+                            continuous learning and building innovative digital solutions. I’m eager to apply my skills,
+                            grow with real-world experience, and contribute meaningfully to any team I become a part of.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Technologies</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Dedication</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <!-- Replace these with your actual skills -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-mysql-plain colored"></i>
+                    </div>
+                    <h3>MySQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-figma-plain colored"></i>
+                    </div>
+                    <h3>Figma</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <img src="assets/pictures/n8n-seeklogo.png" alt="n8n" class="skill-img">
+                    </div>
+                    <h3>n8n (Agentic AI)</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="65%"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Skill (40%) -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="40%"></div>
+                    </div>
+                </div>
+
+                <!-- Microsoft Excel (60%) -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3>Microsoft Excel</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="60%"></div>
+                    </div>
+                </div>
+
+                <!-- Power BI (50%) -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Power BI</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="50%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Replace these with your actual projects -->
+                <div class="project-card" data-project="1">
+                    <div class="project-image">
+                        <img src="assets/pictures/a6768390-5f4b-4745-9021-d74f2a378375.png" alt="Project 1">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Bus Reservation System</h3>
+                        <p
+                            data-full="Developed a Java-based Bus Ticket Booking System with features for seat reservation, date-wise availability checks, and bus info display. Designed modular OOP classes for Bus and Booking with dynamic data handling using ArrayLists.">
+                            Developed a Java-based Bus Ticket Booking System with features for seat reservation,
+                            date-wise availability checks, and bus info display. Designed modular OOP classes for Bus
+                            and Booking with dynamic data handling using ArrayLists.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Core Java</span>
+                            <span class="tech-tag">ArrayList</span>
+                            <span class="tech-tag">OOPS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="2">
+                    <div class="project-image">
+                        <img src="assets/pictures/automation thumbnail.png" alt="Project 2">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Automated Prompt generator</h3>
+                        <p>The AI Prompt Builder is a smart tool I developed to transform vague ideas into precise,
+                            ready-to-use prompts. Instead of leaving users to struggle with unclear requirements, the
+                            tool asks step-by-step, adaptive questions that refine their input and guide them toward
+                            clarity. Whether it’s building a roadmap, generating AI images, or drafting proposals, the
+                            tool ensures that the final output is well-structured and professional. With features like
+                            an interactive form, guided questioning, and automatic prompt generation, it saves time,
+                            removes ambiguity, and delivers consistent, high-quality results—making it a valuable
+                            addition for anyone working with AI-driven tasks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="3">
+                    <div class="project-image">
+                        <img src="assets/pictures/1750580738506.png" alt="Project 3">
+                        <div class="project-overlay">
+                            <button class="view-project-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Movie ticket Booking App UI Design </h3>
+                        <p>Crafted to enhance the cinema ticket booking journey, the interface emphasizes seamless
+                            navigation, an intuitive layout, genre filtering, and detailed ticket visualization.
+
+                            🔍 Highlights:
+                            🎬 Movie genre filter options: Action, Comedy, Sci-Fi
+                            🎟 Detailed ticket design showcasing screen & seat information
+                            👤 Actor-centric movie pages
+                            📍 Location-based browsing, featuring Puducherry in this demo</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Dall-E</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>sathiyaseelansundar@gmail.com</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p> Puducherry, India</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Connect With Me</h3>
+                    <div class="social-grid">
+                        <a href="https://github.com/sathiyaseelan-003" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sathiyaseelan-soundar-a012a821b/" class="social-link"
+                            target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.behance.net/sathiyaseelans4" class="social-link" target="_blank">
+                            <i class="fab fa-behance"></i>
+                            <span>Behance</span>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/sathiyaseelansu1" class="social-link"
+                            target="_blank">
+                            <i class="fab fa-hackerrank"></i>
+                            <span>HackerRank</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <div class="glass-card">
+                    <h3>Download My Resume</h3>
+                    <p>Click the button below to download my latest resume and learn more about my experience and
+                        qualifications.</p>
+                    <a href="assets/documents/Sathiyaseelan_Soundar_resume-s.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>AI Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-body">
+                <div class="chat-message bot-message">
+                    <p>Hello! I'm your AI assistant. I can help you learn more about this portfolio owner's skills,
+                        experience, and projects. What would you like to know?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="Ask me anything about the portfolio..." id="chatInput">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalTitle">Project Title</h2>
+                <img id="modalImage" src="" alt="Project Image">
+                <div id="modalDescription">
+                    <!-- Project description will be loaded here -->
+                </div>
+                <div class="modal-tech" id="modalTech">
+                    <!-- Technologies will be loaded here -->
+                </div>
+                <div class="modal-links">
+                    <a href="#" class="btn btn-primary" id="modalLive">Live Demo</a>
+                    <a href="#" class="btn btn-secondary" id="modalCode">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Footer -->
+    <footer class="copyright-footer">
+        <div class="container">
+            <p>&copy; 2025 Sathiyaseelan Soundar. All rights reserved.</p>
+            <p class="copyright-notice">This portfolio and its code are protected by copyright. Unauthorized
+                reproduction, distribution, or modification is strictly prohibited.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
