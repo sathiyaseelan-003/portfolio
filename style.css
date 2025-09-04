@@ -32,7 +32,7 @@ body {
 /* Custom Hero Font */
 @font-face {
     font-family: 'HimalayaJedjj';
-    src: url('assets/fonts/himalaya-jedjj.ttf') format('truetype');
+    src: url('himalaya-jedjj.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -41,7 +41,7 @@ body {
 /* Logo Font */
 @font-face {
     font-family: 'AlphaBrights';
-    src: url('assets/fonts/Alpha Brights.otf') format('opentype');
+    src: url('Alpha Brights.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
