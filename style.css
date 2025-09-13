@@ -262,12 +262,16 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #ffffff);
+    font-family: 'Alpha Brights.otf',;
+    font-size: 4rem;
+    background: linear-gradient(90deg, #fa9805, #ff5e3a, #ffa500, #667eea, #764ba2);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: gradientShift 10s linear infinite;
+    letter-spacing: 2px;
+    animation: gentlePulse 3s infinite;
 }
 
 @keyframes gradientShift {
