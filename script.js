@@ -39,18 +39,26 @@ const projectsData = {
     },
     2: {
         title: "Automated Prompt generator",
-        image: "assets/pictures/automation thumbnail.png",
+        image: "automation thumbnail.png",
         description: "The AI Prompt Builder is a smart tool I developed to transform vague ideas into precise, ready-to-use prompts. Instead of leaving users to struggle with unclear requirements, the tool asks step-by-step, adaptive questions that refine their input and guide them toward clarity. Whether it's building a roadmap, generating AI images, or drafting proposals, the tool ensures that the final output is well-structured and professional. With features like an interactive form, guided questioning, and automatic prompt generation, it saves time, removes ambiguity, and delivers consistent, high-quality results—making it a valuable addition for anyone working with AI-driven tasks.",
         technologies: ["n8n", "Gemini API", "Prompt Engineering"],
-        liveUrl: "#",
+        liveUrl: "https://www.linkedin.com/posts/sathiyaseelan-soundar-a012a821b_n8n-automation-promptgenerator-activity-7356966264201768961-j_EV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADdk7aEBfwQhtpE3bOWkWPQis7mIX41k0sk",
         codeUrl: "#"
     },
     3: {
         title: "Movie ticket Booking App UI Design",
-        image: "assets/pictures/1750580738506.png",
+        image: "1750580738506.png",
         description: "Crafted to enhance the cinema ticket booking journey, the interface emphasizes seamless navigation, an intuitive layout, genre filtering, and detailed ticket visualization.\n\n🔍 Highlights:\n🎬 Movie genre filter options: Action, Comedy, Sci-Fi\n🎟 Detailed ticket design showcasing screen & seat information\n👤 Actor-centric movie pages\n📍 Location-based browsing, featuring Puducherry in this demo",
         technologies: ["Figma", "Dall-E"],
-        liveUrl: "#",
+        liveUrl: "https://www.behance.net/gallery/228688295/Movie-Ticket-Booking-APP-design",
+        codeUrl: "#"
+    },
+    4: {
+        title: "Landing Page Design - CRO - Anti aging oil",
+        image: "Because your skin deserves more than promises.png",
+        description: "I designed a conversion-optimized landing page for a luxury skincare brand 🌿✨, focusing on creating a premium and elegant user experience. The design combines clean layouts, a sophisticated color palette, and modern typography to reflect the brand’s luxury identity. To improve conversions, I incorporated clear call-to-actions, persuasive content placement, and trust-building elements such as testimonials and benefits upfront. The landing page is fully responsive, ensuring a seamless experience across devices, and was crafted entirely in Figma, following CRO and UX best practices.",
+        technologies: ["Figma", "Dall-E"],
+        liveUrl: "https://www.behance.net/gallery/234528483/Landing-Page-Radiant-Youth-oil",
         codeUrl: "#"
     }
 };
