@@ -31,7 +31,7 @@ const cursorTrail = document.querySelector('.cursor-trail');
 const projectsData = {
     1: {
         title: "Bus Reservation System",
-        image: "assets/pictures/a6768390-5f4b-4745-9021-d74f2a378375.png",
+        image: "assets/Img/a6768390-5f4b-4745-9021-d74f2a378375.png",
         description: "Developed a Java-based Bus Ticket Booking System with features for seat reservation, date-wise availability checks, and bus info display. Designed modular OOP classes for Bus and Booking with dynamic data handling using ArrayLists.",
         technologies: ["Core Java", "ArrayList", "OOPS"],
         liveUrl: "#",
@@ -39,7 +39,7 @@ const projectsData = {
     },
     2: {
         title: "Automated Prompt generator",
-        image: "automation thumbnail.png",
+        image: "assets/Img/automation%20thumbnail.png",
         description: "The AI Prompt Builder is a smart tool I developed to transform vague ideas into precise, ready-to-use prompts. Instead of leaving users to struggle with unclear requirements, the tool asks step-by-step, adaptive questions that refine their input and guide them toward clarity. Whether it's building a roadmap, generating AI images, or drafting proposals, the tool ensures that the final output is well-structured and professional. With features like an interactive form, guided questioning, and automatic prompt generation, it saves time, removes ambiguity, and delivers consistent, high-quality results—making it a valuable addition for anyone working with AI-driven tasks.",
         technologies: ["n8n", "Gemini API", "Prompt Engineering"],
         liveUrl: "https://www.linkedin.com/posts/sathiyaseelan-soundar-a012a821b_n8n-automation-promptgenerator-activity-7356966264201768961-j_EV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADdk7aEBfwQhtpE3bOWkWPQis7mIX41k0sk",
@@ -47,7 +47,7 @@ const projectsData = {
     },
     3: {
         title: "Movie ticket Booking App UI Design",
-        image: "1750580738506.png",
+        image: "assets/Img/1750580738506.png",
         description: "Crafted to enhance the cinema ticket booking journey, the interface emphasizes seamless navigation, an intuitive layout, genre filtering, and detailed ticket visualization.\n\n🔍 Highlights:\n🎬 Movie genre filter options: Action, Comedy, Sci-Fi\n🎟 Detailed ticket design showcasing screen & seat information\n👤 Actor-centric movie pages\n📍 Location-based browsing, featuring Puducherry in this demo",
         technologies: ["Figma", "Dall-E"],
         liveUrl: "https://www.behance.net/gallery/228688295/Movie-Ticket-Booking-APP-design",
@@ -55,10 +55,18 @@ const projectsData = {
     },
     4: {
         title: "Landing Page Design - CRO - Anti aging oil",
-        image: "Because your skin deserves more than promises.png",
+        image: "assets/Img/Because%20your%20skin%20deserves%20more%20than%20promises.png",
         description: "I designed a conversion-optimized landing page for a luxury skincare brand 🌿✨, focusing on creating a premium and elegant user experience. The design combines clean layouts, a sophisticated color palette, and modern typography to reflect the brand’s luxury identity. To improve conversions, I incorporated clear call-to-actions, persuasive content placement, and trust-building elements such as testimonials and benefits upfront. The landing page is fully responsive, ensuring a seamless experience across devices, and was crafted entirely in Figma, following CRO and UX best practices.",
         technologies: ["Figma", "Dall-E"],
         liveUrl: "https://www.behance.net/gallery/234528483/Landing-Page-Radiant-Youth-oil",
+        codeUrl: "#"
+    },
+    5: {
+        title: "Compact Multiband Metamaterial-Inspired Absorber for RF Energy Harvesting",
+        image: "assets/Img/antenna%20design.png",
+        description: "RF energy harvesting is an emerging technology that converts ambient radio frequency signals into usable electrical power for low-power electronic devices. This project addresses key challenges of existing RF harvesting systems, including limited bandwidth, low efficiency, and poor impedance matching. A compact multiband metamaterial-inspired absorber is designed to improve energy absorption across multiple frequency bands. The use of metamaterials enhances electromagnetic performance while maintaining a small and lightweight structure. The antenna incorporates a staircase microstrip patch and metamaterial structures in the ground plane to achieve multiband operation. Simulation is carried out using ADS software, focusing on parameters such as return loss, gain, radiation pattern, and efficiency. The results demonstrate improved performance suitable for ambient RF energy harvesting. This approach reduces reliance on batteries and external power sources. The system is well suited for IoT devices, wireless sensor networks, and wearable electronics. Overall, the work contributes to the development of sustainable and self-powered wireless technologies.",
+        technologies: ["ADS", "Antenna Design", "RF Energy Harvesting"],
+        liveUrl: "#",
         codeUrl: "#"
     }
 };
@@ -330,8 +338,40 @@ function addChatMessage(message, sender) {
     const chatBody = document.querySelector('.chatbot-body');
     const messageDiv = document.createElement('div');
     messageDiv.className = `chat-message ${sender}-message`;
-    messageDiv.innerHTML = `<p>${message}</p>`;
+
+    // Simple text message
+    if (typeof message === 'string') {
+        messageDiv.innerHTML = `<p>${message}</p>`;
+    } else if (message && message.type === 'links' && Array.isArray(message.links)) {
+        // Message with social media link buttons
+        let html = '';
+        if (message.text) {
+            html += `<p>${message.text}</p>`;
+        }
+        html += '<div class="chat-links">';
+        message.links.forEach(link => {
+            html += `<button class="chat-link-btn" data-url="${link.url}">${link.label}</button>`;
+        });
+        html += '</div>';
+        messageDiv.innerHTML = html;
+    } else {
+        // Fallback
+        messageDiv.innerHTML = `<p>${String(message)}</p>`;
+    }
+
     chatBody.appendChild(messageDiv);
+
+    // Attach click handlers for link buttons
+    const buttons = messageDiv.querySelectorAll('.chat-link-btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const url = btn.getAttribute('data-url');
+            if (url) {
+                window.open(url, '_blank');
+            }
+        });
+    });
+
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
@@ -340,7 +380,11 @@ function generateAIResponse(userMessage) {
 
     // Personal information responses
     if (lowerMessage.includes('name') || lowerMessage.includes('who are you') || lowerMessage.includes('what is your name')) {
-        return "My name is Sathiyaseelan Soundar. I'm a passionate developer and designer focused on creating innovative solutions.";
+        return "My name is Sathiyaseelan Soundar. Nice to meet you";
+    }
+
+    if (lowerMessage.includes('self intro') || lowerMessage.includes('intro') || lowerMessage.includes('About you')) {
+        return "My name is Sathiyaseelan Soundar. Recent graduate in B.tech in specialization in ECE in 2025 at Sri Manakula Vinayagar Engineering College puducherry.";
     }
 
     // Experience level and skills
@@ -348,10 +392,6 @@ function generateAIResponse(userMessage) {
         return "I'm a fresher with strong foundational skills in Java, MySQL, Figma, n8n, PowerBI, MS Excel, JavaScript, HTML, and CSS. I'm eager to apply these skills in a professional environment and continuously learn new technologies.";
     }
 
-    // Skills and technologies
-    if (lowerMessage.includes('skill') || lowerMessage.includes('technology') || lowerMessage.includes('programming') || lowerMessage.includes('language')) {
-        return "I have expertise in Java, MySQL, Figma, n8n, PowerBI, MS Excel, JavaScript, HTML, and CSS. I'm proficient in both frontend and backend development, database management, and data visualization tools.";
-    }
 
     // Candidate quality assessment
     if (lowerMessage.includes('good candidate') || lowerMessage.includes('suitable') || lowerMessage.includes('qualified') || lowerMessage.includes('capable') || lowerMessage.includes('reliable')) {
@@ -359,7 +399,7 @@ function generateAIResponse(userMessage) {
     }
 
     // Specific education responses
-    if (lowerMessage.includes('college') || lowerMessage.includes('university') || lowerMessage.includes('engineering college')) {
+    if (lowerMessage.includes('college') || lowerMessage.includes('university') || lowerMessage.includes('education')) {
         return "I studied at Sri Manakula Vinayagar Engineering College with specialization in ECE (Electronics and Communication Engineering).";
     }
 
@@ -373,6 +413,40 @@ function generateAIResponse(userMessage) {
 
     if (lowerMessage.includes('school year') || lowerMessage.includes('when did you finish school') || lowerMessage.includes('schooling year')) {
         return "I finished school in 2021.";
+    }
+
+    // Social media links as buttons
+    const socialLinks = [];
+    if (lowerMessage.includes('linkedin') || lowerMessage.includes('linked in')) {
+        socialLinks.push({
+            label: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/sathiyaseelan-soundar-a012a821b/'
+        });
+    }
+    if (lowerMessage.includes('github') || lowerMessage.includes('git hub')) {
+        socialLinks.push({
+            label: 'GitHub',
+            url: 'https://github.com/sathiyaseelan-003'
+        });
+    }
+    if (lowerMessage.includes('behance')) {
+        socialLinks.push({
+            label: 'Behance',
+            url: 'https://www.behance.net/sathiyaseelans4'
+        });
+    }
+    if (lowerMessage.includes('instagram') || lowerMessage.includes('insta')) {
+        socialLinks.push({
+            label: 'Instagram',
+            url: 'https://www.instagram.com/sathiyaseelansundar?igsh=dGZkdHU2Y3N1N2l2'
+        });
+    }
+    if (socialLinks.length > 0) {
+        return {
+            type: 'links',
+            text: 'You can connect with me on these platforms:',
+            links: socialLinks
+        };
     }
     if (lowerMessage.includes('bye') || lowerMessage.includes('thank you') || lowerMessage.includes('see ya ')) {
         return "Goodbye! It was nice talking to you. Have a great day!";

@@ -32,7 +32,7 @@ body {
 /* Custom Hero Font */
 @font-face {
     font-family: 'HimalayaJedjj';
-    src: url('himalaya-jedjj.ttf') format('truetype');
+    src: url('assets/fonts/himalaya-jedjj.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@ body {
 
 @font-face {
     font-family: 'BlackRusher';
-    src: url('BlackRusher-jEXqM.otf') format('truetype');
+    src: url('assets/fonts/BlackRusher-jEXqM.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -49,7 +49,7 @@ body {
 /* Logo Font */
 @font-face {
     font-family: 'AlphaBrights';
-    src: url('Alpha Brights.otf') format('opentype');
+    src: url('assets/fonts/Alpha%20Brights.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -57,7 +57,7 @@ body {
 
 @font-face {
     font-family: 'HousttelySignature';
-    src: url('HousttelySignature-GOonZ.ttf') format('opentype');
+    src: url('assets/fonts/HousttelySignature-GOonZ.ttf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -66,7 +66,7 @@ body {
 /* Additional Font Face for Logo */
 @font-face {
     font-family: 'BebasNeue';
-    src: url('BebasNeue-Regular.ttf') format('truetype');
+    src: url('assets/fonts/BebasNeue-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -74,14 +74,22 @@ body {
 
 @font-face {
     font-family: 'CinderelaPersonalUseRegular';
-    src: url('CinderelaPersonalUseRegular.ttf') format('truetype');
+    src: url('assets/fonts/CinderelaPersonalUseRegular-RDvM.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'LufgaSemiBoldItalic';
+    src: url('assets/fonts/LufgaSemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
 .hero-name {
-    font-family: 'AlphaBrights', 'Inter', sans-serif;
+    font-family: 'LufgaSemiBoldItalic', 'Inter', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     letter-spacing: 5px;
@@ -141,6 +149,27 @@ body {
     align-items: center;
     height: 70px;
     position: relative;
+}
+
+.nav-actions {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-resume {
+    padding: 0.55rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 10px 30px rgba(255, 119, 0, 0.35);
 }
 
 .nav-logo .logo-text {
@@ -222,10 +251,8 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
+    position: static;
+    transform: none;
 }
 
 .bar {
@@ -262,7 +289,7 @@ body {
 }
 
 .gradient-text {
-    font-family: 'Alpha Brights.otf',;
+    font-family: 'LufgaSemiBoldItalic', 'Inter', sans-serif;
     font-size: 4rem;
     background: linear-gradient(90deg, #fa9805, #ff5e3a, #ffa500, #667eea, #764ba2);
     background-size: 200% 200%;
@@ -927,6 +954,31 @@ section {
     padding: 1rem;
     border-radius: 15px;
     max-width: 80%;
+}
+
+.chat-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.chat-link-btn {
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.chat-link-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
 
 .bot-message {
