@@ -1,14 +1,24 @@
 {
+<<<<<<< HEAD
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+=======
+>>>>>>> 50920b96a12fb52fc81e363b3f73542d93ee0aab
     "version": "0.2.0",
     "configurations": [
         {
             "type": "chrome",
             "request": "launch",
+<<<<<<< HEAD
             "name": "Open index.html",
             "file": "c:\\Users\\sathi\\Downloads\\portfolio-main\\portfolio-main\\index.html"
+=======
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+>>>>>>> 50920b96a12fb52fc81e363b3f73542d93ee0aab
         }
     ]
 }
