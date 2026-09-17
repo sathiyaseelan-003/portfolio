@@ -537,16 +537,25 @@ section {
 }
 
 .skill-icon {
-    font-size: 3rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
     color: #667eea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
 }
 
 .skill-img {
-    width: 56px;
-    height: 56px;
+    width: 54.6px;
+    height: 54.6px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 16px rgba(255, 140, 0, 0.25));
+    filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.2));
+}
+
+.solarwinds-img {
+    width: 90px;
+    height: 90px;
 }
 
 .skill-card h3 {
